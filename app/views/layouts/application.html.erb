@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="красивый флэшкарточкер">
+
+    <title>Флэшкарточкер_Bootstrap</title>
+
+    <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="text-center">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand" >Флэшкарточкер</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Все карточки</a>
+          <a class="nav-link" href="#">Добавить карточку</a>
+        </nav>
+      </div>
+    </header>
+
+  <%= yield %>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Lostmind</p>
+      </div>
+  </div>
+
+  </body>
+</html>
+
