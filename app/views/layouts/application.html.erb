@@ -9,7 +9,7 @@
 
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -20,7 +20,7 @@
       <div class="inner">
         <h3 class="masthead-brand" >Флэшкарточкер</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#">Все карточки</a>
+          <%=link_to "Все карточки", cards_path, :class => "nav-link active"%>
           <a class="nav-link" href="#">Добавить карточку</a>
         </nav>
       </div>
@@ -36,4 +36,3 @@
 
   </body>
 </html>
-
