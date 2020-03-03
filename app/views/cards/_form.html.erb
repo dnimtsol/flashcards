@@ -1,8 +1,5 @@
-
-
 <%= simple_form_for @card ,defaults: { required: false } do |f| %>
-  
-<% if @card.errors.any? %>
+  <% if @card.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@card.errors.count, "error") %> prohibited
@@ -19,5 +16,4 @@
   <%= f.input :translated_text, as: :string, :label => 'Переведенный текст', :error => false%>
   <%= f.input :review_date, as: :string, :input_html => { :value => Date.today},:label => 'Дата просмотра', :readonly => true %>
   <%= f.button :submit,'Cоздать', class: "btn-primary" %>
-  
 <% end %>
