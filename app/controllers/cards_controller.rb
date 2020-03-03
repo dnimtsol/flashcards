@@ -13,7 +13,7 @@ class CardsController < ApplicationController
   def new
     @card = Card.new
   end
-  
+
   def edit
     @card = Card.find(params[:id])
   end
@@ -35,7 +35,7 @@ class CardsController < ApplicationController
     else
       render 'edit'
     end
-  
+
   end
 
   def destroy
@@ -46,7 +46,7 @@ class CardsController < ApplicationController
   end
 
   private
-  
+
   def card_params
     params.require(:card).permit(:original_text, :translated_text, :review_date)
   end
