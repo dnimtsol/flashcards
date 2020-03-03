@@ -7,9 +7,7 @@ class DifferentValidator < ActiveModel::Validator
   end
 
   def validate(record)
-    if hlm(record.original_text) == hlm(record.translated_text)
-      record.errors[:base] << 'must not be the same'
-    end
+    record.errors[:base] << 'must not be the same' if hlm(record.original_text) == hlm(record.translated_text) 
   end
 end
 class Card < ApplicationRecord
@@ -24,4 +22,3 @@ class Card < ApplicationRecord
     self.review_date = Date.today + 3
   end
 end
-
