@@ -6,7 +6,8 @@
     <meta name="description" content="красивый флэшкарточкер">
 
     <title>Флэшкарточкер_Bootstrap</title>
-
+    <%= csrf_meta_tags %>
+    
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -21,7 +22,7 @@
         <h3 class="masthead-brand" >Флэшкарточкер</h3>
         <nav class="nav nav-masthead justify-content-center">
           <%=link_to "Все карточки", cards_path, :class => "nav-link active"%>
-          <a class="nav-link" href="#">Добавить карточку</a>
+          <%=link_to "Добавить карточку", new_card_path, :class => "nav-link"%>
         </nav>
       </div>
     </header>
