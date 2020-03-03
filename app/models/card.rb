@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
+# Card class
 class DifferentValidator < ActiveModel::Validator
   def hlm(data)
     data.delete(' ').downcase
   end
+  
   def validate(record)
     if hlm(record.original_text) == hlm(record.translated_text)
-      record.errors[:base] << "must not be the same"
+       record.errors[:base] << 'must not be the same'
     end
   end
-
 end
 
 class Card < ApplicationRecord
@@ -19,8 +20,9 @@ class Card < ApplicationRecord
   before_create :set_review_date
 
   private
+  
    def set_review_date
-      self.review_date = Date.today+3
+     self.review_date = Date.today+3
    end
 end
 
