@@ -3,7 +3,7 @@
     { plural:
       { key: %i[zero one few many],
         rule: lambda { |n|
-                if n == 0
+                if n.zero?
                   :zero
                 elsif ((n % 10) == 1) && ((n % 100 != 11))
                   :one
