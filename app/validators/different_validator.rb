@@ -7,6 +7,6 @@ class DifferentValidator < ActiveModel::Validator
   end
 
   def validate(record)
-    record.errors[:base] << 'must not be the same' if hlm(record.original_text) == hlm(record.translated_text)
+    record.errors[:base] << I18n.t(:notsame) if hlm(record.original_text) == hlm(record.translated_text)
   end
 end
