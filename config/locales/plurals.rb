@@ -1,7 +1,7 @@
-{ru:
-  {i18n:
-    {plural:
-      {key: [:zero, :one, :few, :many],
+{ ru:
+  { i18n:
+    { plural:
+      { key: [:zero, :one, :few, :many],
         rule: lambda { |n| 
           if n == 0
             :zero
@@ -17,7 +17,7 @@
             ![11, 12, 13, 14].include?(n % 100) )
             :many
           end
-        }
+                     }
       }
     }
   }
