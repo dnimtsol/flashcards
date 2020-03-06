@@ -3,9 +3,9 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Оригинальный текст</th>
-      <th scope="col">Переведенные текст</th>
-      <th scope="col">Дата просмотра</th>
+      <th scope="col"><%= t('activerecord.attributes.card.original_text') %></th>
+      <th scope="col"><%= t('activerecord.attributes.card.translated_text') %></th>
+      <th scope="col"><%= t('activerecord.attributes.card.review_date') %></th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -18,13 +18,13 @@
       <td><%= card.original_text %></td>
       <td><%= card.translated_text %></td>
       <td><%= card.review_date %></td>
-      <td><%= link_to 'Show', card_path(card) %></td>
-      <td><%= link_to 'Edit', edit_card_path(card) %></td>
-      <td><%= link_to 'Destroy', card_path(card),
+      <td><%= link_to t(:link_show), card_path(card) %></td>
+      <td><%= link_to t(:link_edit), edit_card_path(card) %></td>
+      <td><%= link_to t(:link_destroy), card_path(card),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: t(:confirm)} %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
-<%= link_to 'Назад', "/"%>
+<%= link_to t(:link_back), "/"%>
