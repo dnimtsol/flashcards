@@ -1,10 +1,27 @@
-# README
+Install
+Clone the repository
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+git clone git@github.com:dnimtsol/flashcards.git
+cd project
 
-Things you may want to cover:
+Check your Ruby version
 
-* Ruby version
+ruby -v
 
+If not, install the right ruby version using rbenv :
 
+rbenv install 2.5.1
+
+Install dependencies
+
+Using Bundler
+
+bundle
+
+Initialize the database
+
+rails db:create db:migrate 
+
+Serve
+
+rails s
