@@ -9,6 +9,6 @@ class DifferentValidator < ActiveModel::Validator
   private
 
   def hlm(data)
-    data.delete(' ').downcase
+    data.delete(' ').downcase unless data.nil?
   end
 end
