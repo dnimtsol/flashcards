@@ -1,27 +1,26 @@
-Install
-Clone the repository
+# Flashcard
+----
 
-git clone git@github.com:dnimtsol/flashcards.git
-cd project
+#### Install Clone the repository
 
-Check your Ruby version
+`git clone git@github.com:dnimtsol/flashcards.git cd project`
 
-ruby -v
+#### Check your Ruby version
 
-If not, install the right ruby version using rbenv :
+`ruby -v`
 
-rbenv install 2.5.1
+#### If not, install the right ruby version using rbenv :
 
-Install dependencies
+`rbenv install 2.5.1`
 
-Using Bundler
+#### Install dependencies Using Bundler
 
-bundle
+`bundle`
 
-Initialize the database
+#### Initialize the database
 
-rails db:create db:migrate 
+`rails db:create db:migrate`
 
-Serve
+#### Serve
 
-rails s
+`rails s`
