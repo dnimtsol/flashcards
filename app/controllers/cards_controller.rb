@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# cards_controller class
 class CardsController < ApplicationController
   before_action :find_card, only: %i[show edit update destroy]
 
