@@ -1,18 +1,7 @@
 <%= simple_form_for @card ,defaults: { required: false } do |f| %>
-  <% if @card.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= t('error', count: @card.errors.size) %>
-      </h2>
-      <ul>
-        <% @card.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%= f.input :original_text, as: :string, error: false %>
-  <%= f.input :translated_text, as: :string, error: false%>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence %>
+  <%= f.input :original_text, as: :string %>
+  <%= f.input :translated_text, as: :string %>
   <%= f.input :review_date, as: :string, input_html: { value: Date.today}, readonly: true %>
   <%= f.button :submit, class: "btn-primary" %>
 <% end %>
