@@ -2,4 +2,12 @@ AllCops:
   Exclude:
     - db/schema.rb
     - 'node_modules/**/*'
- 
+
+Metrics/LineLength:
+  Max: 120
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false 

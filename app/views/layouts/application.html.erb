@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="красивый флэшкарточкер">
+    <meta name="description" content=<%=t :project_name %>>
 
-    <title>Флэшкарточкер_Bootstrap</title>
-
+    <title><%=t :project_name %></title>
+    <%= csrf_meta_tags %>
+    
     <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -18,10 +19,10 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand" >Флэшкарточкер</h3>
+        <h3 class="masthead-brand" ><%= t :project_name %></h3>
         <nav class="nav nav-masthead justify-content-center">
-          <%=link_to "Все карточки", cards_path, :class => "nav-link active"%>
-          <a class="nav-link" href="#">Добавить карточку</a>
+          <%=link_to t(:link_all_cards), cards_path, class: "nav-link active"%>
+          <%=link_to t('helpers.submit.card.create'), new_card_path, class: "nav-link"%>
         </nav>
       </div>
     </header>
@@ -30,7 +31,7 @@
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <p>Lostmind</p>
+        <p><%= t :author %></p>
       </div>
   </div>
 

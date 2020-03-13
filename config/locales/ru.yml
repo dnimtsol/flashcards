@@ -1,0 +1,28 @@
+ru:
+  notsame: "Должны быть не одинаковые"
+  project_description: 'Первый в мире удобный менеджер флеш-карточек. Именно так.'
+  project_name: 'Флэшкарточкер'
+  author: 'Lostmind'
+  link_back: 'Назад'
+  confirm: 'Вы уверенны?'
+  link_show: 'Показать'
+  link_edit: 'Изменить'
+  link_destroy: 'Удалить'
+  link_all_cards: 'Все карточки'
+  change_card_titel: 'Изменить карточку'
+  new_card_titel: 'Новая карточка'
+  activerecord:
+    attributes:
+     card:
+       original_text: 'Оригинальный текст'
+       translated_text: 'Переведенный текст'
+       review_date: 'Дата просмотра'
+  error:
+    one: '%{count} ошибка не дает сохранить карточку'
+    few: '%{count} ошибки не дают сохранить карточку'
+    many: '%{count} ошибок не дают сохранить карточку'
+  helpers:
+    submit:
+      card:
+        create: "Добавить карточку"
+        update: "Сохранить изменения"

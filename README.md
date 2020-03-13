@@ -1,24 +1,26 @@
-# README
+# Flashcard
+----
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Install Clone the repository
 
-Things you may want to cover:
+`git clone git@github.com:dnimtsol/flashcards.git cd project`
 
-* Ruby version
+#### Check your Ruby version
 
-* System dependencies
+`ruby -v`
 
-* Configuration
+#### If not, install the right ruby version using rbenv :
 
-* Database creation
+`rbenv install 2.5.1`
 
-* Database initialization
+#### Install dependencies Using Bundler
 
-* How to run the test suite
+`bundle`
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Initialize the database
 
-* Deployment instructions
+`rails db:create db:migrate`
 
-* ...
+#### Serve
+
+`rails s`
